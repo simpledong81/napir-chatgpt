@@ -2,7 +2,6 @@
 import { onMounted, ref } from 'vue'
 import { NSpin } from 'naive-ui'
 import { fetchChatConfig } from '@/api'
-import pkg from '@/../package.json'
 
 interface ConfigState {
   timeoutMs?: number
@@ -35,23 +34,31 @@ onMounted(() => {
 <template>
   <NSpin :show="loading">
     <div class="p-4 space-y-4">
-      <h2 class="text-xl font-bold">
-        Version - {{ pkg.version }}
-      </h2>
       <div class="p-2 space-y-2 rounded-md bg-neutral-100 dark:bg-neutral-700">
         <p>
-          此项目开源于
+          本プロジェクトは、
           <a
             class="text-blue-600 dark:text-blue-500"
-            href="https://github.com/Chanzhaoyu/chatgpt-web"
+            href="https://api.openai.com"
             target="_blank"
           >
-            Github
+            OpenAI
           </a>
-          ，免费且基于 MIT 协议，没有任何形式的付费行为！
+          と
+          <a
+            class="text-blue-600 dark:text-blue-500"
+            href="https://platform.openai.com/docs/models/gpt-3-5"
+            target="_blank"
+          >
+            GPT-3.5
+          </a>
+          をもとに、実現できるNapir-ChatGPTでございます。
         </p>
         <p>
-          如果你觉得此项目对你有帮助，请在 Github 帮我点个 Star 或者给予一点赞助，谢谢！
+          デモバージョンなので、表現不備や体験不良などがございましたら是非ご連絡お願いいたします。
+        </p>
+        <p>
+          ありがとうございます🎵🎧🎶
         </p>
       </div>
       <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>

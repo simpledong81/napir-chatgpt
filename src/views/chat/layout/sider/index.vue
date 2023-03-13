@@ -14,6 +14,8 @@ const chatStore = useChatStore()
 const { isMobile } = useBasicLayout()
 const show = ref(false)
 
+const showPromptStore = import.meta.env.VITE_APP_SHOW_PROMPT_STORE === 'true'
+
 const collapsed = computed(() => appStore.siderCollapsed)
 
 function handleAdd() {
@@ -77,7 +79,7 @@ watch(
         <div class="flex-1 min-h-0 pb-4 overflow-hidden">
           <List />
         </div>
-        <div class="p-4">
+        <div v-show="showPromptStore" class="p-4">
           <NButton block @click="show = true">
             Prompt Store
           </NButton>

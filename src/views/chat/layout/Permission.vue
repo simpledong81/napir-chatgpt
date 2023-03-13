@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { NButton, NInput, NModal, useMessage } from 'naive-ui'
 import { fetchVerify } from '@/api'
 import { useAuthStore } from '@/store'
-import Icon403 from '@/icons/403.vue'
+import Icon403 from '@/icons/403-n.vue'
 
 interface Props {
   visible: boolean
@@ -56,9 +56,6 @@ function handlePress(event: KeyboardEvent) {
     <div class="p-10 bg-white rounded dark:bg-slate-800">
       <div class="space-y-4">
         <header class="space-y-2">
-          <h2 class="text-2xl font-bold text-center text-slate-800 dark:text-neutral-200">
-            403
-          </h2>
           <p class="text-base text-center text-slate-500 dark:text-slate-500">
             {{ $t('common.unauthorizedTips') }}
           </p>

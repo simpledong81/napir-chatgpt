@@ -28,6 +28,7 @@ export default {
     unauthorizedTips: '未經授權，請先進行驗證。',
   },
   chat: {
+    nothing: '這裡空空如也~',
     placeholder: '來說點什麼...（Shift + Enter = 換行）',
     placeholderMobile: '來說點什麼...',
     copy: '複製',

@@ -28,6 +28,7 @@ export default {
     unauthorizedTips: 'Unauthorized, please verify first.',
   },
   chat: {
+    nothing: 'Aha~',
     placeholder: 'Ask me anything...(Shift + Enter = line break)',
     placeholderMobile: 'Ask me anything...',
     copy: 'Copy',

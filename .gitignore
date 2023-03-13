@@ -30,3 +30,6 @@ coverage
 
 # Environment variables files
 /service/.env
+
+# bulit files
+/docker-compose/nginx/html/
